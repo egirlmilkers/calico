@@ -1,0 +1,33 @@
+{
+	// Use the project's own TypeScript (required for the Civet extension)
+	"js/ts.tsdk.path": "node_modules/typescript/lib",
+	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
+
+	// The Civet extension handles .civet files.
+	// The built-in TS extension will complain about .civet files if left on,
+	// so disable it as Civet's docs recommend.
+	"js/ts.validate.enabled": false,
+
+	// Hide generated intermediates from the Explorer sidebar
+	"files.exclude": {
+		"src/**/*.ts": true
+	},
+
+	// Don't search inside generated files
+	"search.exclude": {
+		"src/**/*.ts": true,
+		"game/**": true,
+		"node_modules": true
+	},
+
+	// Associate .civet with the Civet language for syntax highlighting
+	"files.associations": {
+		"*.civet": "civet"
+	},
+
+	// Format Civet files on save if the Civet extension supports it
+	"[civet]": {
+		"editor.formatOnSave": false,
+		"editor.tabSize": 4
+	}
+}

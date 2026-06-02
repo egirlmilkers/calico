@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": "$tsc",
+			"group": { "kind": "build", "isDefault": true },
+			"presentation": { "reveal": "always", "panel": "shared" }
+		},
+		{
+			"label": "Dev (watch)",
+			"type": "npm",
+			"script": "dev",
+			"problemMatcher": "$tsc-watch",
+			"isBackground": true,
+			"group": "build",
+			"presentation": { "reveal": "always", "panel": "shared" }
+		},
+		{
+			"label": "Run LÖVE",
+			"type": "npm",
+			"script": "love",
+			"group": "test",
+			"presentation": { "reveal": "always", "panel": "shared" }
+		}
+	]
+}

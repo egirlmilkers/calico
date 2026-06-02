@@ -1,0 +1,10 @@
+{
+	"recommendations": [
+		// Civet language support
+		"DanielX.civet",
+		// TSTL support
+		"typescript-to-lua.vscode-typescript-to-lua",
+		// Lua Language Server
+		"sumneko.lua"
+	]
+}

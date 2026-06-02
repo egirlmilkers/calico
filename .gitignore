@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Civet TS output
+src/**/*.ts
+
+# TSTL Lua output
+lua/*.lua
+
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp

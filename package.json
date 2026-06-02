@@ -1,0 +1,33 @@
+{
+	"name": "calico",
+	"version": "0.1.0",
+	"private": true,
+	"type": "module",
+	"description": "Civet → TypeScript → Lua → LÖVE",
+	"homepage": "https://github.com/egirlmilkers/calico",
+	"license": "GPL-3.0",
+	"author": {
+		"name": "SoniaNvm (EGirlMilkers)",
+		"url": "https://github.com/egirlmilkers"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/egirlmilkers/calico.git"
+	},
+	"scripts": {
+		"build": "node scripts/build.mjs && tstl",
+		"dev": "node scripts/build.mjs && concurrently -n \"civet,tstl\" -c \"cyan,yellow\" \"node scripts/watch.mjs\" \"tstl --watch\"",
+		"love": "love game",
+		"clean": "node -e \"require('fs').rmSync('game', {recursive:true,force:true})\" && node scripts/clean-ts.mjs"
+	},
+	"devDependencies": {
+		"@danielx/civet": "^0.11.12",
+		"@typescript-to-lua/language-extensions": "^1.19.0",
+		"chokidar": "^5.0.0",
+		"concurrently": "^10.0.1",
+		"glob": "^13.0.6",
+		"love-typescript-definitions": "^11.5.3",
+		"typescript": "^6.0.3",
+		"typescript-to-lua": "^1.36.0"
+	}
+}
